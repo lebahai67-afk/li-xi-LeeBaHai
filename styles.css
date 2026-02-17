@@ -1,0 +1,1208 @@
+@import url("https://fonts.googleapis.com/css2?family=Water+Brush&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
+
+* {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+/* khung nhìn máy tính  */
+.box-slider {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+}
+
+.slider1 {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  animation: slider1 3s forwards;
+  user-select: none;
+}
+@keyframes slider1 {
+  0% {
+    transform: scale(3);
+    filter: blur(10px);
+  }
+  100% {
+    transform: scale(1);
+    filter: blur(0);
+  }
+}
+.slider1 img {
+  width: 100%;
+  height: 100%;
+}
+
+/* 4 cái liển */
+.happynewyear {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+/* backrough của 4 liển */
+.textHappynewyear {
+  position: absolute;
+  width: 40vw;
+  height: 5vh;
+  display: flex;
+  justify-content: space-between;
+  top: 8vh;
+  transform: translateY(-10%);
+  animation: textHappyTransform 1s 3s forwards;
+}
+/* khung nhìn mobile */
+@media (max-width: 768px) {
+  .textHappynewyear {
+    width: 60vw;
+    height: 5vh;
+  }
+}
+/* end */
+@keyframes textHappyTransform {
+  0% {
+    transform: translateY(-130px);
+  }
+  50%,
+  100% {
+    transform: translateY(0px);
+  }
+}
+.box-span {
+  top: 0;
+}
+/* khung viền của 4 liển  */
+.textHappynewyear .box-span span {
+  width: 6vw;
+  height: 6vw;
+  background-color: red;
+  transform: rotate(45deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0px 0px 10px rgb(0, 0, 0, 0.6);
+}
+
+@media (max-width: 768px) {
+  .textHappynewyear .box-span span {
+    width: 10vw;
+    height: 10vw;
+  }
+}
+/* animation của 4 liển */
+.textHappynewyear .box-span:nth-child(1) {
+  animation: rotateText 5s linear infinite;
+}
+@keyframes rotateText {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: top;
+  }
+  25% {
+    transform: rotate(5deg);
+    transform-origin: top;
+  }
+  50% {
+    transform: rotate(0deg);
+    transform-origin: top;
+  }
+  75% {
+    transform: rotate(-5deg);
+    transform-origin: top;
+  }
+  100% {
+    transform: rotate(0deg);
+    transform-origin: top;
+  }
+}
+.textHappynewyear .box-span:nth-child(2) {
+  animation: rotateText2 3s linear infinite;
+}
+@keyframes rotateText2 {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: top;
+  }
+  25% {
+    transform: rotate(5deg);
+    transform-origin: top;
+  }
+  50% {
+    transform: rotate(0deg);
+    transform-origin: top;
+  }
+  75% {
+    transform: rotate(-5deg);
+    transform-origin: top;
+  }
+  100% {
+    transform: rotate(0deg);
+    transform-origin: top;
+  }
+}
+.textHappynewyear .box-span:nth-child(3) {
+  animation: rotateText3 7s linear infinite;
+}
+@keyframes rotateText3 {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: top;
+  }
+  25% {
+    transform: rotate(5deg);
+    transform-origin: top;
+  }
+  50% {
+    transform: rotate(0deg);
+    transform-origin: top;
+  }
+  75% {
+    transform: rotate(-5deg);
+    transform-origin: top;
+  }
+  100% {
+    transform: rotate(0deg);
+    transform-origin: top;
+  }
+}
+.textHappynewyear .box-span:nth-child(4) {
+  animation: rotateText4 4s linear infinite;
+}
+@keyframes rotateText4 {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: top;
+  }
+  25% {
+    transform: rotate(5deg);
+    transform-origin: top;
+  }
+  50% {
+    transform: rotate(0deg);
+    transform-origin: top;
+  }
+  75% {
+    transform: rotate(-5deg);
+    transform-origin: top;
+  }
+  100% {
+    transform: rotate(0deg);
+    transform-origin: top;
+  }
+}
+/* end */
+/* khung viền màu vàng của liển */
+.textHappynewyear span::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  border: 2px solid #ffe100;
+  box-shadow: 8px 3px 15px rgb(0, 0, 0, 0.6);
+}
+/* end */
+/* 4 chữ bên trong liển */
+/* ô 1 */
+.textHappynewyear .box-span:nth-child(1) span::after {
+  position: absolute;
+  content: "Chúc";
+  transform: rotate(-45deg);
+  font-family: "Water Brush", cursive;
+  font-size: 2vw;
+  color: #ffe100;
+  animation: textHappy1 4s linear infinite;
+}
+/* khung nhìn mobile */
+@media (max-width: 768px) {
+  .textHappynewyear .box-span:nth-child(1) span::after {
+    font-size: 4vw;
+  }
+}
+/* end */
+@keyframes textHappy1 {
+  0% {
+    content: "Chúc";
+  }
+  33.333% {
+    content: "Vạn";
+  }
+  66.6667% {
+    content: "An";
+  }
+  100% {
+    content: "Chúc";
+  }
+}
+/* end */
+/* ô 2 */
+.textHappynewyear .box-span:nth-child(2) span::after {
+  position: absolute;
+  content: "Mừng";
+  transform: rotate(-45deg);
+  font-family: "Water Brush", cursive;
+  font-size: 2vw;
+  color: #ffe100;
+  animation: textHappy2 4s linear infinite;
+}
+@media (max-width: 768px) {
+  .textHappynewyear .box-span:nth-child(2) span::after {
+    font-size: 4vw;
+  }
+}
+@keyframes textHappy2 {
+  0% {
+    content: "Mừng";
+  }
+  33.333% {
+    content: "Sự";
+  }
+  66.6667% {
+    content: "Khang";
+  }
+  100% {
+    content: "Mừng";
+  }
+}
+/* end */
+/* ô 3 */
+.textHappynewyear .box-span:nth-child(3) span::after {
+  position: absolute;
+  content: "Năm";
+  transform: rotate(-45deg);
+  font-family: "Water Brush", cursive;
+  font-size: 2vw;
+  color: #ffe100;
+  animation: textHappy3 4s linear infinite;
+}
+@media (max-width: 768px) {
+  .textHappynewyear .box-span:nth-child(3) span::after {
+    font-size: 4vw;
+  }
+}
+@keyframes textHappy3 {
+  0% {
+    content: "Năm";
+  }
+  33.333% {
+    content: "Như";
+  }
+  66.6667% {
+    content: "Thịnh";
+  }
+  100% {
+    content: "Năm";
+  }
+}
+/* end */
+/* ô 4 */
+.textHappynewyear .box-span:nth-child(4) span::after {
+  position: absolute;
+  content: "Mới";
+  transform: rotate(-45deg);
+  font-family: "Water Brush", cursive;
+  font-size: 2vw;
+  color: #ffe100;
+  animation: textHappy4 4s linear infinite;
+}
+@media (max-width: 768px) {
+  .textHappynewyear .box-span:nth-child(4) span::after {
+    font-size: 4vw;
+  }
+}
+@keyframes textHappy4 {
+  0% {
+    content: "Mới";
+  }
+  33.333% {
+    content: "Ý";
+  }
+  66.6667% {
+    content: "Vượng";
+  }
+  100% {
+    content: "Mới";
+  }
+}
+/* end */
+/* lồng đèn */
+.box-slider_img2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+/* lồng đèn 1 */
+.box-slider-img2 {
+  position: absolute;
+  width: 10vw;
+  top: -25vh;
+  left: 0;
+  z-index: 100;
+  animation: dichchuyen1 2s forwards, lanterns 3s infinite linear;
+  animation-delay: 2s;
+}
+
+@keyframes dichchuyen1 {
+  0% {
+    top: -150px;
+    left: 0;
+  }
+  30% {
+    top: 0;
+    left: 0;
+  }
+  50% {
+    top: -20px;
+    left: 0;
+  }
+  100% {
+    top: 0;
+    left: 0;
+  }
+}
+/*kích thước lồng đèn  */
+.box-slider-img2 .slider-img2 {
+  position: absolute;
+  top: 10vh;
+  left: 3vw;
+  width: 10vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+/* hiệu ứng */
+@keyframes lanterns {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: top;
+  }
+  25% {
+    transform-origin: top;
+    transform: rotate(5deg);
+  }
+  50% {
+    transform-origin: top;
+    transform: rotate(0deg);
+  }
+  75% {
+    transform-origin: top;
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+    transform-origin: top;
+  }
+}
+/* lòng dèn 2 */
+.box-slider-img2 .slider-img2::before {
+  position: absolute;
+  content: "";
+  width: 10vw;
+  height: 10vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  filter: blur(0.5vw);
+  z-index: -1;
+}
+
+.box-slider-img2 .slider-img2::after {
+  position: absolute;
+  content: "";
+  width: 0.2vw;
+  height: 20vh;
+  background: #ffe100;
+  z-index: -1;
+  top: -15vh;
+}
+
+.slider-img2 img {
+  width: 100%;
+  z-index: 9;
+}
+
+/* Nền */
+.box-slider-img3 {
+  position: absolute;
+  top: -20vh;
+  left: 23vw;
+  width: 13vw;
+  height: auto;
+  z-index: 100;
+  animation: dichchuyen2 2s 2s forwards, lanterns 3s 1s infinite linear;
+}
+@keyframes dichchuyen2 {
+  0% {
+    top: -200px;
+    left: 230px;
+  }
+  30% {
+    top: 0;
+    left: 230px;
+  }
+  50% {
+    top: -20px;
+    left: 230px;
+  }
+  100% {
+    top: 0;
+    left: 230px;
+  }
+}
+
+/* lồng đèn 1 */
+.box-slider-img3 .slider-img3 {
+  position: absolute;
+  top: 5vh;
+  width: 10vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.box-slider-img3 .slider-img3::before {
+  position: absolute;
+  content: "";
+  width: 6vw;
+  height: 6vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  filter: blur(0.5vw);
+  z-index: -1;
+}
+
+.box-slider-img3 .slider-img3::after {
+  position: absolute;
+  content: "";
+  width: 0.2vw;
+  height: 20vh;
+  background: #ffe100;
+  z-index: -1;
+  top: -15vh;
+}
+
+.slider-img3 img {
+  width: 100%;
+  z-index: 9;
+}
+
+/* 3 */
+.box-slider-img4 {
+  position: absolute;
+  top: -20vh;
+  right: 23vw;
+  width: 10vw;
+  height: auto;
+  z-index: 100;
+  animation: dichchuyen3 2s 2s forwards, lanterns 3s 1s infinite linear;
+}
+
+@keyframes dichchuyen3 {
+  0% {
+    top: -200px;
+    right: 230px;
+  }
+  30% {
+    top: 0;
+    right: 230px;
+  }
+  50% {
+    top: -20px;
+    right: 230px;
+  }
+  100% {
+    top: 0;
+    right: 230px;
+  }
+}
+.box-slider-img4 .slider-img4 {
+  position: absolute;
+  top: 5vh;
+  width: 10vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.box-slider-img4 .slider-img4::before {
+  position: absolute;
+  content: "";
+  width: 6vw;
+  height: 6vw;
+  background-image: radial-gradient(
+    circle farthest-corner at center,
+    #373737 0%,
+    #5d0000 100%
+  );
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  filter: blur(0.5vw);
+  z-index: -1;
+}
+
+.box-slider-img4 .slider-img4::after {
+  position: absolute;
+  content: "";
+  width: 0.2vw;
+  height: 20vh;
+  background: #ffe100;
+  z-index: -1;
+  top: -15vh;
+}
+
+.slider-img4 img {
+  width: 100%;
+  z-index: 9;
+}
+/* lồng đèn 4 */
+.box-slider-img5 {
+  position: absolute;
+  top: -20vh;
+  right: 3vw;
+  width: 10vw;
+  height: auto;
+  z-index: 100;
+  animation: dichchuyen4 2s 2s forwards, lanterns 3s infinite linear;
+}
+@keyframes dichchuyen4 {
+  0% {
+    top: -200px;
+    right: 30px;
+  }
+  30% {
+    top: 0;
+    right: 30px;
+  }
+  50% {
+    top: -20px;
+    right: 30px;
+  }
+  100% {
+    top: 0;
+    right: 30px;
+  }
+}
+.box-slider-img5 .slider-img5 {
+  position: absolute;
+  top: 10vh;
+  width: 10vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.box-slider-img5 .slider-img5::before {
+  position: absolute;
+  content: "";
+  width: 6vw;
+  height: 6vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  filter: blur(0.5vw);
+  z-index: -1;
+}
+
+.box-slider-img5 .slider-img5::after {
+  position: absolute;
+  content: "";
+  width: 0.2vw;
+  height: 20vh;
+  background: #ffe100;
+  z-index: -1;
+  top: -15vh;
+}
+
+.slider-img5 img {
+  width: 100%;
+  z-index: 9;
+}
+
+/* con lân */
+.box-lion_dance {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+}
+/* kích thước lân 1 */
+.box-lion_dance .lion_dance1 {
+  position: absolute;
+  width: 15vw;
+  top: 60vh;
+  right: 5vw;
+  z-index: 100;
+  transform: scale(0);
+  animation: lionDance 3s 3.5s forwards alternate;
+}
+@media (max-width: 768px) {
+  .box-lion_dance .lion_dance1 {
+    top: 80vh;
+    width: 30vw;
+  }
+}
+@keyframes lionDance {
+  0% {
+    transform: scale(0);
+  }
+  10% {
+    transform: scale(1.3);
+  }
+  20% {
+    transform: scale(0.7);
+  }
+  30%,
+  100% {
+    transform: scale(1);
+  }
+}
+.box-lion_dance .lion_dance1::before {
+  position: absolute;
+  width: 8vw;
+  height: 1vh;
+  background-color: rgb(0, 0, 0);
+  border-radius: 10px;
+  left: 60%;
+  bottom: 6vh;
+  transform: translateX(-50%);
+  filter: blur(0.5vw);
+  z-index: -1;
+}
+
+/* kích thước lân 2 */
+.box-lion_dance .lion_dance2 {
+  position: absolute;
+  width: 15vw;
+  top: 65vh;
+  left: 5vw;
+  z-index: 100;
+  transform: scale(0);
+  animation: lionDance 3s 3.5s forwards alternate;
+}
+@media (max-width: 768px) {
+  .box-lion_dance .lion_dance2 {
+    top: 80vh;
+    width: 35vw;
+  }
+}
+.box-lion_dance .lion_dance2::before {
+  position: absolute;
+  content: "";
+  width: 6vw;
+  height: 1vh;
+  border-radius: 10px;
+  left: 44%;
+  bottom: 3vh;
+  transform: translateX(-50%);
+  filter: blur(0.5vw);
+  z-index: -1;
+}
+
+
+/* 2 khung viền ở dưới */
+.box-rim {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.box-rim .rim1 {
+  top: 0;
+  transform: scaleY(-1);
+}
+.box-rim .rim2 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+/* mây bay */
+.box-texture_clouds {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.texture_clouds1:nth-child(1) {
+  position: absolute;
+  width: 8vw;
+  animation: textureClouds1 60s infinite linear;
+}
+
+@keyframes textureClouds1 {
+  0% {
+    top: 200px;
+    left: -150px;
+  }
+  50% {
+    top: 200px;
+    left: 1300px;
+  }
+  100% {
+    top: 200px;
+    left: -150px;
+  }
+}
+.texture_clouds1 img {
+  width: 8vw;
+}
+
+.texture_clouds1:nth-child(2) {
+  position: absolute;
+  width: 9vw;
+  z-index: 10;
+  animation: textureClouds2 30s infinite linear;
+}
+
+@keyframes textureClouds2 {
+  0% {
+    top: 320px;
+    left: -150px;
+  }
+  50% {
+    top: 320px;
+    left: 1300px;
+  }
+  100% {
+    top: 200px;
+    left: -150px;
+  }
+}
+.texture_clouds1:nth-child(2) img {
+  width: 11vw;
+}
+
+.texture_clouds1:nth-child(3) {
+  position: absolute;
+  width: 6vw;
+  z-index: 10;
+  animation: textureClouds3 65s infinite linear;
+}
+
+@keyframes textureClouds3 {
+  0% {
+    top: 150px;
+    right: -150px;
+  }
+  50% {
+    top: 150px;
+    right: 1300px;
+  }
+  100% {
+    top: 150px;
+    right: -150px;
+  }
+}
+.texture_clouds1:nth-child(3) img {
+  width: 6vw;
+}
+
+.texture_clouds1:nth-child(4) {
+  position: absolute;
+  width: 11vw;
+  z-index: 10;
+  animation: textureClouds4 20s infinite linear;
+}
+
+@keyframes textureClouds4 {
+  0% {
+    top: 260px;
+    right: -150px;
+  }
+  50% {
+    top: 260px;
+    right: 1300px;
+  }
+  100% {
+    top: 260px;
+    right: -150px;
+  }
+}
+.texture_clouds1:nth-child(4) img {
+  width: 11vw;
+}
+
+.texture_clouds1:nth-child(5) {
+  position: absolute;
+  width: 8vw;
+  z-index: 10;
+  animation: textureClouds5 50s infinite linear;
+}
+
+@keyframes textureClouds5 {
+  0% {
+    top: 380px;
+    right: -150px;
+  }
+  50% {
+    top: 380px;
+    right: 1300px;
+  }
+  100% {
+    top: 380px;
+    right: -150px;
+  }
+}
+.texture_clouds1:nth-child(5) img {
+  width: 8vw;
+}
+
+/* mây tĩnh dưới chân */
+.box-big_clouds {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.big_clouds1 {
+  position: absolute;
+  bottom: -15vh;
+  width: 110%;
+  z-index: 7;
+  animation: bigClouds1 4s infinite alternate;
+}
+
+
+@keyframes bigClouds1 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.98);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.big_clouds2 {
+  position: absolute;
+  bottom: -20vh;
+  width: 110%;
+  z-index: 6;
+  animation: bigClouds2 3s infinite alternate;
+}
+
+@keyframes bigClouds2 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.98);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.big_clouds3 {
+  position: absolute;
+  bottom: -15vh;
+  width: 110%;
+  z-index: 5;
+  animation: bigClouds3 2s infinite alternate;
+}
+
+
+@keyframes bigClouds3 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.98);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* card slider */
+.card-wrapper {
+  max-width: 80vw;
+  height: 90vh;
+  margin: 0 15vw 5vh;
+  padding: 25vh 2vw;
+  overflow: hidden;
+  animation: slider1 3s forwards;
+}
+@media (max-width: 768px) {
+  .card-wrapper {
+    max-width: 100vw;
+    height: 90vh;
+    margin: 0;
+    padding: 25vh 2vw;
+    overflow: hidden;
+    animation: slider1 3s forwards;
+  }
+}
+.card-list .card-item {
+  list-style: none;
+}
+
+.card-list .card-item .card-link {
+  user-select: none;
+  display: block;
+  background: red;
+  border-radius: 12px 12px;
+  text-decoration: none;
+  border: 3px solid transparent;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease;
+}
+
+.card-list .card-item .card-link:active {
+  cursor: grabbing;
+}
+
+.card-list .card-item .card-link:hover {
+  border-color: yellow;
+}
+
+.card-list .card-link .card-img {
+  width: 100%;
+  height: 49vh;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.card-list .card-link .badge {
+  color: red;
+  padding: 2vh 4vw;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin: 2vh 2vw;
+  background: yellow;
+  width: 80%;
+  border-radius: 50px 50px;
+  border: none;
+  transition: transform 0.3s ease;
+
+}
+
+.card-list .card-link .badge:hover {
+  transform: scale(1.1);
+}
+
+.card-list .card-link .card-title {
+  font-size: 1.19rem;
+  color: black;
+  font-weight: 600;
+}
+
+/* li xi 1 */
+.slider3 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgb(0, 0, 0, 0.5);
+  z-index: 100000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0);
+  transition: all 0.5s;
+}
+.slider3.active {
+  transform: scale(1);
+}
+.slider3 i {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #fff;
+  font-size: 30px;
+  cursor: pointer;
+}
+.box-content {
+  position: relative;
+  width: 800px;
+  height: 500px;
+  display: flex;
+  overflow: hidden;
+  background: linear-gradient(
+    360deg,
+    rgb(206, 19, 53) 0%,
+    rgb(199, 20, 53) 100%
+  );
+}
+/* lời chúc */
+.overlay {
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.overlay-content {
+  width: 70vw;
+  height: 100vh;
+  background-image: url("image/brg_li_xi.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+
+}
+@media (max-width: 768px) {
+  .overlay-content {
+    background-size: cover;
+    width: 100vw;
+    height: 250px;
+  }
+}
+.overlay-text-title {
+  font-family: "Dancing Script", cursive;
+  font-size: 3.5vw;
+  position: absolute;
+  top: 15vh;
+  left: 58vw;
+  color: red;
+}
+@media (max-width: 768px) {
+  .overlay-text-title {
+    font-size: 15px;
+    position: absolute;
+    top: 35vh;
+    left: 66vw;
+    color: red;
+  }
+}
+.overlay-text {
+  font-family: "Dancing Script", cursive;
+  position: absolute;
+  width: 20vw;
+  font-size: 1rem;
+  top: 25vh;
+  left:58vw;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+@media (max-width: 768px) {
+  .overlay-text {
+    font-size: 8px;
+    top: 43vh;
+    width: 35vw;
+  }
+}
+.img-overlay {
+  background-size: cover;
+  position: absolute;
+  right: 18vw;
+  top: 55vh;
+  width: 25vw;
+  height: 25vh;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .img-overlay {
+    right: 6vw;
+    top: 55vh;
+    width: 35vw;
+    height: 10vh;
+  }
+}
+
+/* Animation cho thông báo chụp màn hình */
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.screenshot-notice {
+  animation: blink 1.5s infinite, pulse 2s infinite;
+  
+  /* Gradient nền vàng-trắng */
+  background: linear-gradient(135deg, #fff9c4 0%, #ffffff 50%, #fff9c4 100%);
+  
+  /* Viền vàng đậm */
+  border: 4px solid #ffd700;
+  border-radius: 15px;
+  
+  /* Đổ bóng */
+  box-shadow: 
+    0 0 20px rgba(255, 215, 0, 0.5),
+    0 8px 16px rgba(0, 0, 0, 0.3),
+    inset 0 1px 3px rgba(255, 255, 255, 0.8);
+  
+  /* Text styling */
+  color: #d32f2f;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px 40px;
+  margin: 20px auto;
+  text-shadow: 
+    1px 1px 2px rgba(255, 255, 255, 0.8),
+    2px 2px 4px rgba(0, 0, 0, 0.2);
+  
+  max-width: 90%;
+  
+  /* Icon camera lớn hơn */
+  letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+  .screenshot-notice {
+    font-size: 16px;
+    padding: 15px 25px;
+    border: 3px solid #ffd700;
+    border-radius: 10px;
+  }
+}
